@@ -10,7 +10,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-[AFNetworking](https://github.com/AFNetworking/AFNetworking) is reqiered for images downloading management.
+[AFNetworking](https://github.com/AFNetworking/AFNetworking) is used for downloading images.
 
 ## Installation
 
@@ -79,13 +79,13 @@ static NSString *apiURL;
 
 This class sets some parameters of AFHTTPSessionManager like base URL, serializers, SSL rules and so on and provides REST methods, which should be smart here, e.g. do auto relogin when session token is expired.
 
-ACBestOfTheRest use this class or singletone instance to request data through API. So as the first you need some kind of API manager class and specify it in your .plist file using `API Manager Class` key: 
+ACBestOfTheRest uses this class or singletone instance to request data through API. So as the first you need some kind of API manager class and specify it in your .plist file using `API Manager Class` key: 
 
 ![Sample 1](http://appcraft.pro/external/botr_scr_001.png)
 
 Notice that in this example public VK API `https://api.vk.com/method` is using as `API URL` key for API manager class.
 
-Either API manager class or it's shared instance should responds to `get:parameters:completion:` method. ACBestOfTheRest check if the class you specefied responds to this method, if no, it tries to get it's shared instance by calling `sharedInstance` method and if even that instance doesn't response to `get:parameters:completion:` method it throws NSAssert exception. So you should implement the method either in your API manager class directly or in it's shared instance. 
+Either API manager class or it's shared instance should responds to `get:parameters:completion:` method. ACBestOfTheRest checks if the class you specefied responds to this method, if no, it tries to get it's shared instance by calling `sharedInstance` method and if even that instance doesn't response to `get:parameters:completion:` method it throws NSAssert exception. So you should implement the method either in your API manager class directly or in it's shared instance. 
 
 ### 2. Use BOTRViewController
 
@@ -126,7 +126,7 @@ After that set `Url Path` and `Data Path` properties of your table:
 
 ![Sample 3](http://appcraft.pro/external/botr_scr_003.png)
 
-`Url Path` will be passed to your API manager class. `Data Path` is the path to some array in JSON response. If your JSON response contains just an array, leave this property empty. If your JSON response contains a dictionary, which contains `response` field with desired array, then set it's value to `response`. You can use `/` character to specify more complex path.
+`Url Path` will be passed to your API manager class. `Data Path` is the path to some array in JSON response. If your JSON response contains just an array, just leave this property empty. If your JSON response contains a dictionary, which contains `response` field with desired array, then set it's value to `response`. You can use `/` character to specify more complex path.
 
 Then drop UITableViewCell prototype on your table and set it's reuse identifier property to `BOTRCell`.
 

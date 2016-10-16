@@ -11,8 +11,6 @@
 
 @interface ACDetailsViewController ()
 
-@property (weak, nonatomic) IBOutlet UITextView *detailsTextView;
-
 @end
 
 @implementation ACDetailsViewController
