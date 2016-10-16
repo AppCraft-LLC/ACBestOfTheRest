@@ -79,7 +79,9 @@ static NSString *apiURL;
 
 This class sets some parameters of AFHTTPSessionManager like base URL, serializers, SSL rules and so on and provides REST methods, which should be smart here, e.g. do auto relogin when session token is expired.
 
-ACBestOfTheRest use this class or singletone instance to request data throught API. So as the first you need some kind of API manager class and specify it in your .plist file using `API Manager Class` key: ![Sample 1](http://appcraft.pro/external/botr_scr_001.png)
+ACBestOfTheRest use this class or singletone instance to request data throught API. So as the first you need some kind of API manager class and specify it in your .plist file using `API Manager Class` key: 
+
+![Sample 1](http://appcraft.pro/external/botr_scr_001.png)
 
 Notice that in this example public VK API `https://api.vk.com/method` is using as `API URL` key for API manager class.
 
@@ -116,9 +118,13 @@ In the ViewController.m file we just initialize API manager class:
 
 ### 3. Do Something In Your Storyboard
 
-Drop UITableView on your ViewController's view, set it's class to BOTRTableView and add the table to `tableViews` outlet collection: ![Sample 2](http://appcraft.pro/external/botr_scr_002.png)
+Drop UITableView on your ViewController's view, set it's class to BOTRTableView and add the table to `tableViews` outlet collection:
 
-After that set `Url Path` and `Data Path` properties of your table: ![Sample 3](http://appcraft.pro/external/botr_scr_003.png)
+![Sample 2](http://appcraft.pro/external/botr_scr_002.png)
+
+After that set `Url Path` and `Data Path` properties of your table:
+
+![Sample 3](http://appcraft.pro/external/botr_scr_003.png)
 
 `Url Path` will be passed to your API manager class. `Data Path` is the path to some array in JSON response. If your JSON response contains just an array, leave this property empty. If your JSON response contains a dictionary, which contains `response` field with desired array, then set it's value to `response`. You can use `\` character to specify more complex path.
 
@@ -128,7 +134,9 @@ Finally, drop some UILabels into cell, set class of them as `BOTRLabel` and spec
 
 ### 4. That's it
 
-Just run the project at this point and see result: ![Sample 4](http://appcraft.pro/external/botr_scr_004.png)
+Just run the project at this point and see result:
+
+![Sample 4](http://appcraft.pro/external/botr_scr_004.png)
 
 You can add other labels and set it's `Key` value to show display other fields of JSON response, you can also use BOTRImageView to display images. You can pass elements of array to details controllers and do all stuff you do before, but with less code. Please see example project for more datails.
 
