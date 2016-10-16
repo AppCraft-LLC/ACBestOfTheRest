@@ -7,7 +7,8 @@
 //
 
 @import UIKit;
+#import "BOTRViewController.h"
 
-@interface ACViewController : UIViewController
+@interface ACViewController : BOTRViewController
 
 @end

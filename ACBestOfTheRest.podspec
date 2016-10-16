@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'ACBestOfTheRest'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of ACBestOfTheRest.'
+  s.summary          = 'With ACBestOfTheRest you can easily reflect JSON responses on UITableView or UICollectionView with no code.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,14 +18,14 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+ACBestOfTheRest allows you to set up field names of JSON responses directly in the storyboard file and make everything working just with it. Drop BOTRTableView or BOTRCollectionView on the view of your UIViewController, specify API url path, API manager class, set fields and default values for BOTRLabel and BOTRImageView views and that's it. Really. No code, it's just working. ACBestOfTheRest is very light and agile, e.g. you can use convertors to format values of JSON responses, overridden methods to do extra thing and so on.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/ACBestOfTheRest'
+  s.homepage         = 'https://github.com/AppCraft-LLC/ACBestOfTheRest'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Alexander' => 'amoneron@gmail.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/ACBestOfTheRest.git', :tag => s.version.to_s }
+  s.author           = { 'AppCraft LLC' => 'support@appcraft.pro' }
+  s.source           = { :git => 'https://github.com/AppCraft-LLC/ACBestOfTheRest.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
@@ -38,5 +38,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'AFNetworking'
 end
