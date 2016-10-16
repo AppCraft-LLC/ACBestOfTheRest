@@ -1,0 +1,12 @@
+use_frameworks!
+
+target 'ACBestOfTheRest_Example' do
+  pod 'ACBestOfTheRest', :path => '../'
+
+  target 'ACBestOfTheRest_Tests' do
+    inherit! :search_paths
+
+    pod 'Specta'
+  pod 'Expecta'
+  end
+end
