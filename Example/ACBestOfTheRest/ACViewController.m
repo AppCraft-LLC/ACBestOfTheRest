@@ -29,9 +29,9 @@
 {
     if (value) {
         NSDate *date = [NSDate dateWithTimeIntervalSince1970:[[NSString stringWithFormat:@"%@", value] integerValue]];
-        return date ? [self.dateFormatter stringFromDate:date] : @"";
+        return date ? [self.dateFormatter stringFromDate:date] : @"No date";
     }
-    return @"";
+    return @"No date";
 }
 
 @end

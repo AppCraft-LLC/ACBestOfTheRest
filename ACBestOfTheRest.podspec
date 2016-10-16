@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ACBestOfTheRest'
-  s.version          = '0.1.0'
+  s.version          = '0.2'
   s.summary          = 'With ACBestOfTheRest you can easily reflect JSON responses on UITableView or UICollectionView with no code.'
 
 # This description is used to generate tags and improve search results.

@@ -79,7 +79,7 @@ static NSString *apiURL;
 
 This class sets some parameters of AFHTTPSessionManager like base URL, serializers, SSL rules and so on and provides REST methods, which should be smart here, e.g. do auto relogin when session token is expired.
 
-ACBestOfTheRest use this class or singletone instance to request data throught API. So as the first you need some kind of API manager class and specify it in your .plist file using `API Manager Class` key: 
+ACBestOfTheRest use this class or singletone instance to request data through API. So as the first you need some kind of API manager class and specify it in your .plist file using `API Manager Class` key: 
 
 ![Sample 1](http://appcraft.pro/external/botr_scr_001.png)
 
@@ -126,7 +126,7 @@ After that set `Url Path` and `Data Path` properties of your table:
 
 ![Sample 3](http://appcraft.pro/external/botr_scr_003.png)
 
-`Url Path` will be passed to your API manager class. `Data Path` is the path to some array in JSON response. If your JSON response contains just an array, leave this property empty. If your JSON response contains a dictionary, which contains `response` field with desired array, then set it's value to `response`. You can use `\` character to specify more complex path.
+`Url Path` will be passed to your API manager class. `Data Path` is the path to some array in JSON response. If your JSON response contains just an array, leave this property empty. If your JSON response contains a dictionary, which contains `response` field with desired array, then set it's value to `response`. You can use `/` character to specify more complex path.
 
 Then drop UITableViewCell prototype on your table and set it's reuse identifier property to `BOTRCell`.
 
@@ -138,7 +138,7 @@ Just run the project at this point and see result:
 
 ![Sample 4](http://appcraft.pro/external/botr_scr_004.png)
 
-You can add other labels and set it's `Key` value to show display other fields of JSON response, you can also use BOTRImageView to display images. You can pass elements of array to details controllers and do all stuff you do before, but with less code. Please see example project for more datails.
+You can add other labels and set it's `Key` value to show display other fields of JSON response, you can also use BOTRImageView to display images. You can pass elements of array to details controllers and do all stuff you do before (for collections use BOTRCollectionView), but with less (or even no) code. Please browse example project to see how to use convertors, pass data between controllers and do other stuff.
 
 ## Author
 

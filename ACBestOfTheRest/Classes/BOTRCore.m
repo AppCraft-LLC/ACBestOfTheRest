@@ -98,13 +98,25 @@ static id ApiManager;
 }
 
 + (void)mapDictionary:(NSDictionary *)dictionary onView:(UIView *)view {
-    if (dictionary == nil || ![dictionary isKindOfClass:[NSDictionary class]]) return;
+    if (dictionary == nil || ![dictionary isKindOfClass:[NSDictionary class]]) dictionary = [NSDictionary new];
     NSArray *labels = [view subviewsOfClass:[BOTRLabel class]];
     for (BOTRLabel *label in labels)
-        if (label.key) [label setRemoteValue:dictionary[label.key]];
+        if (label.key && label.key.length) {
+            NSArray *steps = [label.key componentsSeparatedByString:@"/"];
+            id value = dictionary[steps[0]];
+            for (int i = 1; i < steps.count; i++)
+                if ([value isKindOfClass:[NSDictionary class]]) value = value[steps[i]];
+            [label setRemoteValue:value];
+        }
     NSArray *remoteImageViews = [view subviewsOfClass:[BOTRImageView class]];
     for (BOTRImageView *imageView in remoteImageViews)
-        if (imageView.key) [imageView setRemoteValue:dictionary[imageView.key]];
+        if (imageView.key && imageView.key.length) {
+            NSArray *steps = [imageView.key componentsSeparatedByString:@"/"];
+            id value = dictionary[steps[0]];
+            for (int i = 1; i < steps.count; i++)
+                if ([value isKindOfClass:[NSDictionary class]]) value = value[steps[i]];
+            [imageView setRemoteValue:value];
+        }
 }
 
 + (void)get:(NSString *)request parameters:(NSDictionary *)parameters completion:(requestCompletionBlock)completionBlock {

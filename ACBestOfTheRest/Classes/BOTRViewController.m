@@ -75,6 +75,7 @@
         UITableView *tableView = (UITableView *)view;
         if (tableView && [tableView isKindOfClass:[BOTRTableView class]]) {
             NSDictionary *item = ((BOTRTableView *)tableView).dataArray[[tableView indexPathForCell:sender].row];
+            if (![item isKindOfClass:[NSDictionary class]]) item = [NSDictionary new];
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
             [segue.destinationViewController performSelector:setItemSelector withObject:item];
@@ -88,6 +89,7 @@
             UICollectionView *collectionView = (UICollectionView *)view;
             if (collectionView && [collectionView isKindOfClass:[BOTRCollectionView class]]) {
                 NSDictionary *item = ((BOTRCollectionView *)collectionView).dataArray[[collectionView indexPathForCell:sender].item];
+                if (![item isKindOfClass:[NSDictionary class]]) item = [NSDictionary new];
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
                 [segue.destinationViewController performSelector:setItemSelector withObject:item];
