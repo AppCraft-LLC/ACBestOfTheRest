@@ -24,6 +24,7 @@
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 		B6C757301DB38F41009FC2D1 /* ACApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C7572F1DB38F41009FC2D1 /* ACApiManager.m */; };
 		B6C757561DB39418009FC2D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6C757551DB39418009FC2D1 /* LaunchScreen.storyboard */; };
+		B6C7577C1DB3B09C009FC2D1 /* ACDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B6C7577B1DB3B09C009FC2D1 /* ACDetailsViewController.m */; };
 		F22623D70628B3BBCCA5784B /* Pods_ACBestOfTheRest_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 973D85FF355026F62C986883 /* Pods_ACBestOfTheRest_Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,8 @@
 		B6C7572E1DB38F41009FC2D1 /* ACApiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACApiManager.h; sourceTree = "<group>"; };
 		B6C7572F1DB38F41009FC2D1 /* ACApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACApiManager.m; sourceTree = "<group>"; };
 		B6C757551DB39418009FC2D1 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B6C7577A1DB3B09C009FC2D1 /* ACDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACDetailsViewController.h; sourceTree = "<group>"; };
+		B6C7577B1DB3B09C009FC2D1 /* ACDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACDetailsViewController.m; sourceTree = "<group>"; };
 		BAC77BCC9E18FFC4FA22B0F7 /* Pods-ACBestOfTheRest_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ACBestOfTheRest_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ACBestOfTheRest_Tests/Pods-ACBestOfTheRest_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE279C4479138257D409941F /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,10 +143,12 @@
 				6003F59C195388D20070C39A /* ACAppDelegate.h */,
 				6003F59D195388D20070C39A /* ACAppDelegate.m */,
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
-				B6C757551DB39418009FC2D1 /* LaunchScreen.storyboard */,
 				6003F5A5195388D20070C39A /* ACViewController.h */,
 				6003F5A6195388D20070C39A /* ACViewController.m */,
+				B6C7577A1DB3B09C009FC2D1 /* ACDetailsViewController.h */,
+				B6C7577B1DB3B09C009FC2D1 /* ACDetailsViewController.m */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
+				B6C757551DB39418009FC2D1 /* LaunchScreen.storyboard */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
 			name = "Example for ACBestOfTheRest";
@@ -404,6 +409,7 @@
 			files = (
 				6003F59E195388D20070C39A /* ACAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* ACViewController.m in Sources */,
+				B6C7577C1DB3B09C009FC2D1 /* ACDetailsViewController.m in Sources */,
 				B6C757301DB38F41009FC2D1 /* ACApiManager.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
